@@ -1,0 +1,53 @@
+﻿@model User
+@{
+    Layout = "~/Views/Shared/_LoginAndRegisterlayout.cshtml";
+}
+
+
+<!-- Sign up form -->
+<section class="signup">
+    <div class="container">
+        <div class="signup-content">
+            <div class="signup-form">
+                <h2 class="form-title">Sign up</h2>
+                <form asp-action="Register" method="POST" class="register-form" id="register-form">
+                    <div class="form-group">
+                        <label asp-for="Fname"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                        <input asp-for="Fname" type="text" id="name" placeholder="first Name" />
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Lname"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                        <input asp-for="Lname" type="text"  id="name" placeholder="Last Name" />
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Email"><i class="zmdi zmdi-email"></i></label>
+                        <input asp-for="Email" type="email"  id="email" placeholder="Your Email" />
+                    </div>
+                    <div class="form-group">
+                        <label for="userName"><i class="zmdi zmdi-lock"></i></label>
+                        <input type="text" name="userName" id="pass" placeholder="User Name" />
+                    </div>
+                    <div class="form-group">
+                        <label for="Password"><i class="zmdi zmdi-lock-outline"></i></label>
+                        <input type="password" name="Password" id="re_pass" placeholder="Enter your password" />
+                    </div>
+                    <div class="form-group">
+                        <label>Register As:</label>
+                        <br />
+                        <br />
+                        <label for="Role" class="control-label"></label>
+                        <select name="Role" class="form-control" asp-items="ViewBag.Role"></select>
+                    </div>
+                    
+                    <div class="form-group form-button">
+                        <input type="submit" name="signup" id="signup" class="form-submit" value="Register" />
+                    </div>
+                </form>
+            </div>
+            <div class="signup-image">
+                <figure><img src="~/LoginAndRegister/images/signup-image.jpg" alt="sing up image"></figure>
+                <a asp-controller="LoginAndRegister" asp-action="Login" class="signup-image-link">I am already member</a>
+            </div>
+        </div>
+    </div>
+</section>

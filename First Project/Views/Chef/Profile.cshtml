@@ -1,0 +1,40 @@
+﻿@model User
+@{
+    Layout = "~/Views/Shared/_ChefLayout.cshtml";
+}
+
+<h1>Welcom @Model.Fname </h1>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                First Name
+            </th>
+            <th>
+                Last Name
+            </th>
+            <th>
+                Email
+            </th>
+          
+            
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                @Model.Fname
+            </td>
+            <td>
+                @Model.Lname
+            </td>
+            <td>
+                @Model.Email
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+

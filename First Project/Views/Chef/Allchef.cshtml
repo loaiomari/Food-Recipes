@@ -1,0 +1,33 @@
+﻿@model IEnumerable<User>
+@{
+    Layout = "~/Views/Shared/_ChefLayout.cshtml";
+    
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Chef
+            </th>
+            <th>
+                
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @item.Fname
+                </td>
+                <td>
+                   <a asp-action="Recipe" asp-route-itemid="@item.UserId">View Recipes </a>
+                </td>
+               
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,32 @@
+﻿@model IEnumerable<Recipe>
+@{
+    Layout = "~/Views/Shared/_UserLayout.cshtml";
+}
+
+   
+    <!--================Blog Area =================-->
+    <section class="blog_area section_padding">
+        <div class="container">
+            <div class="row">
+              @foreach(var item in Model)
+            {
+                <div class="col-sm-6 col-lg-4">
+                    <div class="single_blog_item">
+                        <div class="single_blog_img">
+                            @* <img src="~/Home/img/food_item/food_item_1.png" alt=""> *@
+                        </div>
+                        <div class="single_blog_text">
+                            <h3>@item.RecipeName</h3>
+                            <h4>Price: @item.Price JD</h4>
+                            <h5>Ingredient: @item.Ingredients</h5>
+                            @* <p>beef Burger,maxecan Burger and more</p> *@
+                            
+                        </div>
+                    </div>
+                </div>
+            }
+        </div> 
+        </div>
+    </section>
+    <!--================Blog Area =================-->
+
